@@ -1,0 +1,34 @@
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+}
+
+.thumbnails > * {
+    flex-grow: 1;
+    height: var(--height);
+    flex-basis: auto;
+}
+
+/* Hack posledního řádku */
+.thumbnails::after {
+    content: "";
+    display: block;
+    flex-grow: 3;
+}
+
+/* Toto zajistí, že <figure> obalující zcela responzivní <img> bude vynucovat zadaný poměr stran. */
+/* Na současných verzích prohlížečů je poměr stran zachován z contentu při flex-basis:auto; */
+/*
+.thumbnails__ratio3to2 {
+    flex-basis: calc(var(--height) * 1.5);
+}
+
+.thumbnails__ratio89to50 {
+    flex-basis: calc(var(--height) * 1.78);
+}
+
+.thumbnails__ratio117to50 {
+    flex-basis: calc(var(--height) * 2.34);
+}
+*/

@@ -1,0 +1,22 @@
+.thumbnails {
+    --height: 360px;
+    /* 100% - h1 - h1 margin - scrollbar - body margin-bottom */
+    height: calc(100vh - 2.5rem - 2*0.5rem - 16px - 12px);
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.thumbnails::after {
+    content: "";
+    display: block;
+    flex-grow: 999;
+}
+
+.thumbnails > * {
+    width: var(--height); 
+    flex-grow: 1;
+    max-height: 360px;
+    flex-basis: auto; /* výšku nastaví podle skutečného poměru stran contentu*/
+}

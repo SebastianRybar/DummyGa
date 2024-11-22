@@ -1,0 +1,23 @@
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-auto-rows: var(--height);
+}
+
+.thumbnails > * {
+    /*height: var(--height);*/
+}
+
+.thumbnails__ratio3to2 {
+
+}
+
+.thumbnails__ratio89to50 {
+
+}
+
+.thumbnails__ratio117to50 {
+
+}
