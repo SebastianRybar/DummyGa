@@ -6,7 +6,7 @@
 
 .thumbnails > * {
     flex-grow: 1;
-    height: var(--height);
+    height: var(--height); /* Výška obrázku 150px*/
     flex-basis: auto;
 }
 
